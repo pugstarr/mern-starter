@@ -24,7 +24,7 @@ const certificate = fs.readFileSync('./localhost.pem', 'utf8');
 const credentials = { key: privateKey, cert: certificate };
 
 // MongoDB connection using Mongoose
-const MONGODB_URI = "mongodb+srv://moroti:Soccer2917@tester.3otbpag.mongodb.net/?retryWrites=true&w=majority";
+const MONGODB_URI = "URI_OR_GET_FROM_ENV_VARIABLES";
 
 mongoose.connect(MONGODB_URI)
 .then(() => console.log("Successfully connected to MongoDB using Mongoose"))
