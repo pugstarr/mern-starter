@@ -18,8 +18,8 @@ app.use(cors({
     credentials: true,
 }));
 
-const privateKey = fs.readFileSync('../localhost-key.pem', 'utf8');
-const certificate = fs.readFileSync('../localhost.pem', 'utf8');
+const privateKey = fs.readFileSync('./localhost-key.pem', 'utf8');
+const certificate = fs.readFileSync('./localhost.pem', 'utf8');
 
 const credentials = { key: privateKey, cert: certificate };
 
