@@ -33,14 +33,14 @@ exports.addUser = async (req, res) => {
     }
 };
 
-const client = new OAuth2Client("91591654443-af99j2dvlknfuursglmehifb9j2i3kro.apps.googleusercontent.com");
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 exports.googleLogin = async (req, res) => {
     try {
         const { token } = req.body;
         const ticket = await client.verifyIdToken({
             idToken: token,
-            audience: "91591654443-af99j2dvlknfuursglmehifb9j2i3kro.apps.googleusercontent.com", // Specify the CLIENT_ID of the app that accesses the backend
+            audience: process.env.GOOGLE_CLIENT_ID,
         });
 
         const { name, email, picture } = ticket.getPayload();

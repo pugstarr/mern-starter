@@ -7,7 +7,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import  getTheme from './themes/theme';
 import { gapi } from 'gapi-script';
 
-const clientId = "91591654443-af99j2dvlknfuursglmehifb9j2i3kro.apps.googleusercontent.com";
+const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);

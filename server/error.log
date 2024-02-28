@@ -1,0 +1,4 @@
+{"level":"error","message":"Error in Google Authentication: Wrong recipient, payload audience != requiredAudience","service":"user-service","timestamp":"2024-02-27 19:41:53"}
+{"level":"error","message":"Error in Google Authentication: Wrong recipient, payload audience != requiredAudience","service":"user-service","timestamp":"2024-02-27 19:43:52"}
+{"level":"error","message":"Error in Google Authentication: Wrong recipient, payload audience != requiredAudience","service":"user-service","timestamp":"2024-02-27 19:46:20"}
+{"level":"error","message":"Error in Google Authentication: Wrong recipient, payload audience != requiredAudience","service":"user-service","timestamp":"2024-02-27 19:50:12"}

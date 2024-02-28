@@ -18,13 +18,16 @@ app.use(cors({
     credentials: true,
 }));
 
-const privateKey = fs.readFileSync('./localhost-key.pem', 'utf8');
-const certificate = fs.readFileSync('./localhost.pem', 'utf8');
+const privateKeyPath = process.env.PRIVATE_KEY_PATH;
+const certificatePath = process.env.CERTIFICATE_PATH;
+
+const privateKey = fs.readFileSync(privateKeyPath, 'utf8');
+const certificate = fs.readFileSync(certificatePath, 'utf8');
 
 const credentials = { key: privateKey, cert: certificate };
 
 // MongoDB connection using Mongoose
-const MONGODB_URI = "URI_OR_GET_FROM_ENV_VARIABLES";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI)
 .then(() => console.log("Successfully connected to MongoDB using Mongoose"))
